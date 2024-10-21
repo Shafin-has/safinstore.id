@@ -13,30 +13,38 @@
 }
 
 body {
-  min-height: 100vh;
-  background-color: var(--background-color);
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  min-height: 110vh;
+  background: linear-gradient(135deg, #061c3d, #0f4c81);
   color: var(--text-color);
 }
 
+/* Mengatur navbar */
 .navbar-main {
   width: 100%;
-  height: auto;
+  top: 0;
   background-color: var(--background-color);
   color: var(--text-color);
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px; /* Menambahkan padding pada navbar */
-  z-index: 1000; /* Memastikan navbar berada di atas elemen lain */
+  padding: 10px 20px;
+  z-index: 1000;
+  height: 90px;
+  box-shadow: 0 0 15px var(--background-color);
 }
 
 .logo {
   color: var(--text-color);
-  margin-left: 20px; /* Mengurangi margin kiri */
   font-size: 1.5rem;
   font-weight: 700;
   transition: color 0.3s ease;
+  border-bottom: 4px solid var(--main-color);
+  border-radius: 10px;
 }
 
 .logo:hover {
@@ -44,6 +52,7 @@ body {
 }
 
 .navbar-links {
+  font-weight: bold;
   display: flex;
   padding: 0; /* Menghapus padding */
 }
@@ -112,57 +121,441 @@ body {
   color: #00e676;
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
-  .navbar-main {
-    padding: 10px; /* Mengurangi padding pada navbar di layar kecil */
-    flex-direction: column; /* Mengubah arah flex untuk tampilan vertikal */
-    align-items: flex-start; /* Menyelaraskan elemen ke kiri */
-  }
+.menu {
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--text-color);
+  display: none;
+}
 
-  .navbar-links {
-    display: none; /* Sembunyikan navbar secara default */
-    flex-direction: column; /* Ubah menjadi kolom saat ditampilkan */
-    position: absolute; /* Posisi absolut untuk menampilkannya di atas konten lainnya */
-    background-color: var(
-      --background-color
-    ); /* Latar belakang sesuai navbar */
-    top: 60px; /* Jarak dari atas navbar */
-    right: 20px; /* Jarak dari sisi kanan */
-    width: 200px; /* Lebar menu */
-    border-radius: 5px; /* Sudut membulat */
-    z-index: 1000; /* Memastikan menu di atas konten lain */
-  }
+.main-span {
+  display: flex;
+  flex-direction: column; /* Mengatur elemen secara vertikal */
+  align-items: flex-start; /* Memposisikan elemen ke kiri */
+  justify-content: center;
+  height: 70vh; /* Menyesuaikan tinggi halaman */
+  padding: 20px;
+  text-align: left; /* Teks rata kiri */
+}
 
-  .navbar-links.active {
-    display: flex; /* Tampilkan navbar links saat menu aktif */
-  }
+/* Shimmer Wave Style */
+#shimmerWave {
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--text-color);
+  perspective: 100px;
+  transform-style: preserve-3d;
+  display: flex;
+  gap: 2px;
+}
 
-  .navbar-links li {
-    margin: 10px 0; /* Margin untuk item list */
-  }
+/* Style untuk setiap span (huruf) */
+#shimmerWave span {
+  display: inline-block;
+  animation: wave 2.4s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
 
-  .search-game {
-    width: auto; /* Membuat lebar pencarian otomatis */
-    margin-left: 10px; /* Memberikan jarak antara pencarian dan link */
+/* Efek gelombang pada animasi */
+@keyframes wave {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1) rotateY(0);
+    color: var(--highlight-color);
+    text-shadow: 0 0 0 rgba(70, 175, 200, 0);
   }
-
-  .menu {
-    cursor: pointer; /* Mengubah kursor untuk menunjukkan elemen interaktif */
-    margin-left: 10px; /* Memberikan jarak antara ikon menu dan pencarian */
+  12% {
+    transform: translate3d(2px, -2px, 2px) scale(1.1) rotateY(6deg);
+    color: var(--main-color);
+  }
+  24% {
+    transform: translate3d(0, 0, 0) scale(1) rotateY(0);
+    color: var(--main-color);
+    opacity: 1;
+  }
+  36% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: -8;
   }
 }
 
-@media (max-width: 480px) {
+/* Delay efek pada tiap huruf */
+#shimmerWave span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+#shimmerWave span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+#shimmerWave span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+#shimmerWave span:nth-child(4) {
+  animation-delay: 0.25s;
+}
+#shimmerWave span:nth-child(5) {
+  animation-delay: 0.3s;
+}
+#shimmerWave span:nth-child(6) {
+  animation-delay: 0.35s;
+}
+#shimmerWave span:nth-child(7) {
+  animation-delay: 0.4s;
+}
+#shimmerWave span:nth-child(8) {
+  animation-delay: 0.45s;
+}
+#shimmerWave span:nth-child(9) {
+  animation-delay: 0.5s;
+}
+#shimmerWave span:nth-child(10) {
+  animation-delay: 0.55s;
+}
+#shimmerWave span:nth-child(11) {
+  animation-delay: 0.6s;
+}
+#shimmerWave span:nth-child(12) {
+  animation-delay: 0.65s;
+}
+#shimmerWave span:nth-child(13) {
+  animation-delay: 0.7s;
+}
+#shimmerWave span:nth-child(14) {
+  animation-delay: 0.75s;
+}
+#shimmerWave span:nth-child(15) {
+  animation-delay: 0.8s;
+}
+#shimmerWave span:nth-child(16) {
+  animation-delay: 0.85s;
+}
+#shimmerWave span:nth-child(17) {
+  animation-delay: 0.9s;
+}
+#shimmerWave span:nth-child(18) {
+  animation-delay: 0.95s;
+}
+#shimmerWave span:nth-child(19) {
+  animation-delay: 1s;
+}
+#shimmerWave span:nth-child(20) {
+  animation-delay: 1.05s;
+}
+
+.main-span p {
+  font-size: 1.2rem; /* Ukuran font span */
+  line-height: 1; /* Jarak antar baris */
+  max-width: 1000px; /* Batas lebar teks span */
+  color: var(--text-color); /* Warna teks */
+}
+
+.sec h1 {
+  text-align: center;
+  font-size: 30px;
+  margin: 50px 0;
+}
+
+.list-game {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.list-game .game {
+  border-radius: 10px; /* Menambahkan sudut melengkung */
+  margin-top: 50px;
+  padding: 15px; /* Ruang di dalam border */
+  width: 300px; /* Lebar tetap untuk box */
+  background-color: var(
+    --background-color
+  ); /* Warna latar belakang sesuai tema */
+  text-align: center; /* Teks di tengah */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8),
+    /* Bayangan utama */ 0 12px 30px rgba(0, 0, 0, 0.5); /* Bayangan tambahan untuk kedalaman */
+  transition: transform 0.3s ease; /* Efek transisi saat hover */
+}
+
+.img {
+  width: 100%; /* Mengatur lebar gambar agar mengikuti lebar elemen */
+  height: 210px; /* Mengatur tinggi elemen gambar */
+  overflow: hidden; /* Menyembunyikan bagian gambar yang lebih besar dari box */
+  position: relative; /* Memungkinkan penempatan gambar dengan cara yang lebih fleksibel */
+}
+
+.img img {
+  width: 100%; /* Memastikan gambar mengisi lebar box */
+  height: 100%; /* Memastikan gambar mengisi tinggi box */
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi dan mengisi box secara proporsional */
+  position: absolute; /* Memungkinkan penempatan gambar sesuai posisi parent */
+  top: 0;
+  left: 0;
+}
+
+.game:hover {
+  transform: scale(1.05); /* Efek membesar saat hover */
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minimax(320px, 1fr));
+}
+
+.game .box {
+  padding: 15px 0 0 0;
+  text-align: end;
+}
+
+.game .box .btn {
+  font-size: 12px;
+  color: var(--background-color);
+  padding: 10px 18px;
+  font-weight: 800;
+  border: 1px solid var(--background-color);
+  border-radius: 17px;
+}
+
+.game .box .btn:hover {
+  cursor: pointer;
+  background-color: var(--main-color);
+  color: var(--background-color);
+}
+
+/* Style umum untuk hero section */
+.hero-test {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Mengatur ukuran dan tampilan konten area */
+.area-content {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect untuk area-content */
+.area-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling untuk bagian konten */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Icon user (profil) styling */
+.img-face i {
+  font-size: 60px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Styling nama user */
+.content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Styling paragraf testimonial */
+.content p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Mengatur layout dan warna ikon sosial media */
+.social-media i {
+  font-size: 20px;
+  margin: 0 10px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect untuk ikon sosial media */
+.social-media i:hover {
+  color: #007bff; /* Warna biru saat hover */
+}
+
+/* Responsive */
+/* Global Responsive Adjustments */
+@media (max-width: 1200px) {
+  .navbar-links li {
+    margin: 0 10px;
+  }
+
+  .search-game {
+    width: 200px;
+  }
+
+  .main-span p {
+    font-size: 1rem;
+    max-width: 800px;
+  }
+
+  #shimmerWave {
+    font-size: 40px;
+  }
+
+  .list-game .game {
+    width: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-links li {
+    margin: 0 8px;
+  }
+
+  .search-game {
+    width: 180px;
+  }
+
+  .main-span p {
+    font-size: 0.9rem;
+    max-width: 700px;
+  }
+
+  #shimmerWave {
+    font-size: 35px;
+  }
+
+  .list-game .game {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-main {
+    padding: 10px;
+  }
+
+  .navbar-links {
+    display: none; /* Menghilangkan link navbar di layar kecil */
+  }
+
+  .menu {
+    display: block; /* Menampilkan tombol menu */
+  }
+
+  .main-span p {
+    font-size: 0.8rem;
+    max-width: 600px;
+  }
+
+  #shimmerWave {
+    font-size: 30px;
+  }
+
+  .list-game {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .list-game .game {
+    width: 200px;
+  }
+
+  .hero-test {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 576px) {
   .logo {
-    font-size: 1.2rem; /* Mengurangi ukuran font logo di layar kecil */
+    font-size: 1.2rem;
+  }
+
+  .search-game {
+    width: 150px;
+    padding: 3px;
   }
 
   .search-game input[type="text"] {
-    font-size: 0.8rem; /* Mengurangi ukuran font input di layar kecil */
+    font-size: 0.8rem;
   }
 
-  .navbar-links li {
-    margin: 0 5px; /* Menambahkan margin lebih kecil untuk layar sangat kecil */
+  .main-span p {
+    font-size: 0.7rem;
+    max-width: 100%;
+  }
+
+  #shimmerWave {
+    font-size: 25px;
+  }
+
+  .list-game .game {
+    width: 100%;
+  }
+
+  .content h2 {
+    font-size: 18px;
+  }
+
+  .content p {
+    font-size: 12px;
+  }
+
+  .social-media i {
+    font-size: 16px;
+  }
+
+  .area-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar-main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .search-game {
+    width: 100px;
+  }
+
+  .list-game .game {
+    width: 150px;
+  }
+
+  .main-span p {
+    font-size: 0.6rem;
+  }
+
+  #shimmerWave {
+    font-size: 20px;
+  }
+
+  .game .box .btn {
+    font-size: 10px;
+    padding: 8px 12px;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 320px) {
+  .list-game {
+    grid-template-columns: 1fr;
+  }
+
+  .list-game .game {
+    width: 100%;
+  }
+
+  .main-span p {
+    font-size: 0.5rem;
+  }
+
+  #shimmerWave {
+    font-size: 18px;
   }
 }

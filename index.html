@@ -13,91 +13,239 @@
         rel="stylesheet">
     <!-- Link Cdn Font -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css  ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Font Awesome untuk icon sosial media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Link style -->
     <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="navbar-main">
-            <a href="#" class="logo" id="logo">Fin Store</a>
-            <ul class="navbar-links" id="navbar-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#cate">Categories</a></li>
-                <li><a href="#gamelist">Game List</a></li>
-                <li><a href="#sosmed">Social Media</a></li>
-                <li><a href="#bp">Promo & Discount</a></li>
-            </ul>
-            <div class="search-game">
-                <input type="text" id="text" placeholder="Search Game">
-                <i class="fa-solid fa-magnifying-glass"></i>
+    <div class="navbar-main">
+        <!-- Logo Toko -->
+        <a href="#" class="logo" id="logo">Fin Store</a>
+
+        <!-- Link Navigasi -->
+        <ul class="navbar-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#cate">Categories</a></li>
+            <li><a href="#gamelist">Game List</a></li>
+            <li><a href="#sosmed">Social Media</a></li>
+            <li><a href="#bp">Promo & Discount</a></li>
+        </ul>
+
+        <!-- Menu Pencarian -->
+        <div class="search-game">
+            <input type="text" id="text" placeholder="Search Game">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <!-- Ikon Menu untuk Mobile -->
+        <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+
+    <section class="main-span">
+        <div id="shimmerWave">
+            <span>W</span>
+            <span>e</span>
+            <span>l</span>
+            <span>c</span>
+            <span>o</span>
+            <span>m</span>
+            <span>e</span>
+            <span> </span>
+            <span>T</span>
+            <span>o</span>
+            <span> </span>
+            <span>F</span>
+            <span>i</span>
+            <span>n</span>
+            <span> </span>
+            <span>S</span>
+            <span>t</span>
+            <span>o</span>
+            <span>r</span>
+            <span>e</span>
+        </div>
+
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, maiores in minus ducimus amet porro
+            repellendus eius corporis aperiam molestias enim sunt consequuntur repellat distinctio ratione ex. Eaque
+            molestias magni cupiditate fugit sit, quas nobis!</p>
+    </section>
+
+    <section class="sec">
+        <h1>Game Popular</h1>
+        <div class="list-game">
+            <!-- Awal -->
+            <div class="game">
+                <div class="img"><img src="img/ml-img.jpeg" alt=""></div>
+                <div class="description">Mobile Legend</div>
+                <div class="box">
+                    <button class="btn">Read More</button>
+                </div>
             </div>
-            <div class="menu" id="menu">
-                <i class="fa-solid fa-bars"></i>
+            <div class="game">
+                <div class="img"><img src="img/cod-img.jpeg" alt=""></div>
+                <div class="description">Call Of Duty Mobile</div>
+                <div class="box">
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+            <div class="game">
+                <div class="img"><img src="img/hok-img.jpeg" alt=""></div>
+                <div class="description">Honor Of Kings</div>
+                <div class="box">
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+            <div class="game">
+                <div class="img"><img src="img/ff-img.jpeg" alt=""></div>
+                <div class="description">Free Fire</div>
+                <div class="box">
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+            <div class="game">
+                <div class="img"><img src="img/ww.jpeg" alt=""></div>
+                <div class="description">Wuthering Waves</div>
+                <div class="box">
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+            <div class="game">
+                <div class="img"><img src="img/pubg-img.jpeg" alt=""></div>
+                <div class="description">Pubg Mobile</div>
+                <div class="box">
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+            <div class="game">
+                <div class="img"><img src="img/ftbl-img.jpeg" alt=""></div>
+                <div class="description">Football</div>
+                <div class="box">
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+            <div class="game">
+                <div class="img"><img src="img/gi-img.jpeg" alt=""></div>
+                <div class="description">Ghensin Impact</div>
+                <div class="box">
+                    <button class="btn">Read More</button>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="main">
-            <h1>Fin Store</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi ab mollitia harum praesentium sapiente
-                odio laboriosam in fugit quibusdam iure, voluptatem alias adipisci suscipit? Deleniti, aliquid
-                reiciendis quis voluptate nobis aperiam exercitationem ratione fuga error.</p>
-        </div>
-
-        <div class="hero-sect">
-            <h1>Game Popular</h1>
-            <ul>
-                <li><img src="img/cod-img.jpeg" alt=""></li>
-                <li><img src="img/ff-img.jpeg" alt=""></li>
-                <li><img src="img/gi-img.jpeg" alt=""></li>
-                <li><img src="img/hok-img.jpeg" alt=""></li>
-                <li><img src="img/ml-img.jpeg" alt=""></li>
-                <li><img src="img/pubg-img.jpeg" alt=""></li>
-                <li><img src="img/ww.jpeg" alt=""></li>
-            </ul>
-        </div>
-
-        <div class="hero-maint">
-            <h2>Fin Store</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ab facere nulla placeat libero modi
-                dignissimos perferendis itaque quaerat mollitia officiis minima blanditiis quia ratione consequuntur
-                corporis illo fuga, enim earum at delectus tempore, obcaecati praesentium. Aliquid aperiam quasi
-                obcaecati?</p>
-        </div>
-
-        <div class="hero-test">
-            <div class="test-1">
-                <i class="fa-solid fa-user"></i>
-                <h3>Pelanggan 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, dignissimos ducimus? Voluptas
-                    cupiditate soluta asperiores.</p>
+    <div class="hero-test">
+        <div id="slider" class="owl-carousel owl-theme">
+            <div class="area-content">
+                <div class="content">
+                    <div class="img-face">
+                        <i class="fa-solid fa-user"></i>
+                        <h2>Someone 1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum delectus unde minima,
+                            laudantium ab quisquam!</p>
+                        <p class="social-media">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-tiktok"></i>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="test-2">
-                <i class="fa-solid fa-user"></i>
-                <h3>Pelanggan 2</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur atque accusantium dignissimos
-                    nobis amet nostrum hic voluptate iure.</p>
+            <div class="area-content">
+                <div class="content">
+                    <div class="img-face">
+                        <i class="fa-solid fa-user"></i>
+                        <h2>Someone 1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum delectus unde minima,
+                            laudantium ab quisquam!</p>
+                        <p class="social-media">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-tiktok"></i>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="test-3">
-                <i class="fa-solid fa-user"></i>
-                <h3>Pelanggan 3</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis inventore deserunt quisquam dicta
-                    pariatur voluptas aperiam vel, veritatis debitis accusantium?</p>
+            <div class="area-content">
+                <div class="content">
+                    <div class="img-face">
+                        <i class="fa-solid fa-user"></i>
+                        <h2>Someone 1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum delectus unde minima,
+                            laudantium ab quisquam!</p>
+                        <p class="social-media">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-tiktok"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="area-content">
+                <div class="content">
+                    <div class="img-face">
+                        <i class="fa-solid fa-user"></i>
+                        <h2>Someone 1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum delectus unde minima,
+                            laudantium ab quisquam!</p>
+                        <p class="social-media">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-tiktok"></i>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="footer">
-            <ul>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Whatsapp</a></li>
-                <li><a href="#">Facebook</a></li>
-            </ul>
-            &#169 2024 Fin Store
-        </div>
+    <div class="footer">
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Whatsapp</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ul>
+        &#169 2024 Fin Store
+    </div>
 
-        <script src="script/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#slider').owlCarousel({
+                loop: true,
+                margin: 15,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
 
     </div>
 
